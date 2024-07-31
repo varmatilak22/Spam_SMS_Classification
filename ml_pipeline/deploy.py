@@ -153,7 +153,7 @@ FN & TN
 ''')
 
     st.write('**Visualization of the Confusion Matrix:**')
-    st.image('../assests/confusion_matrx.png', caption='Confusion Matrix Heatmap')
+    st.image(abs_image_path('confusion_matrx.png'), caption='Confusion Matrix Heatmap')
 
     # Classification Report Explanation
     st.header('🔍 Classification Report')

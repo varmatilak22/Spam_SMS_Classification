@@ -6,32 +6,32 @@ This project aims to classify SMS messages as spam or non-spam using natural lan
 Project link [Spam_SMS_Classification](https://spam-sms-classification.streamlit.app/)
 
 ## Table of Contents
-- [Getting Started](#getting-started)
-- [Prerequisites](#prerequisites)
-- [Data](#data)
-- [Text Preprocessing](#text-preprocessing)
-- [Model Training](#model-training)
-- [Evaluation](#evaluation)
-- [Class Imbalance & SMOTE](#class-imbalance--smote)
-- [Optimization](#optimization)
-  - [Grid Search](#grid-search)
-  - [Random Search](#random-search)
-- [Real World Examples](#real-world-examples)
-- [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+- [Getting Started 🚀](#getting-started)
+- [Prerequisites 📋](#prerequisites)
+- [Data 📊](#data)
+- [Text Preprocessing 📝](#text-preprocessing)
+- [Model Training 🏋️‍♂️](#model-training)
+- [Evaluation 📈](#evaluation)
+- [Class Imbalance & SMOTE ⚖️](#class-imbalance--smote)
+- [Optimization 🛠️](#optimization)
+  - [Grid Search 🔍](#grid-search)
+  - [Random Search 🎲](#random-search)
+- [Real World Examples 🌍](#real-world-examples)
+- [Results 🏆](#results)
+- [Contributing 🤝](#contributing)
+- [License 📄](#license)
+- [Acknowledgments 🙏](#acknowledgments)
 
-## Getting Started
+## Getting Started 🚀
 Follow these instructions to set up and run the project locally for development and testing purposes.
 
-## Prerequisites
+## Prerequisites 📋
 Ensure that you have Python installed along with the required libraries. Download Python from [python.org](https://www.python.org/) and install libraries using pip.
 
-## Data
+## Data 📊
 The dataset for this project is located in the data directory. The primary file is `sms_spam.csv`, which contains SMS messages labeled as spam or ham (non-spam). The dataset is sourced from Kaggle.
 
-## Text Preprocessing
+## Text Preprocessing 📝
 We use the `TfidfVectorizer` to preprocess SMS messages, transforming raw text into numerical features that machine learning algorithms can use.
 
 1. **TF-IDF Vectorization**:
@@ -43,7 +43,7 @@ We use the `TfidfVectorizer` to preprocess SMS messages, transforming raw text i
    Example:
    - For the message "Win a $100 gift card", TF-IDF will assign higher scores to less common words like "gift" and "card" compared to common words like "win" and "a".
 
-## Model Training
+## Model Training 🏋️‍♂️
 The model training process is detailed in the `model_train.py` script. We utilize decision tree and random forest algorithms to train models on the preprocessed SMS data.
 
 **Decision Tree**:
@@ -54,10 +54,10 @@ The model training process is detailed in the `model_train.py` script. We utiliz
    - An ensemble learning method that combines multiple decision trees to improve accuracy and robustness.
    - Random forests aggregate predictions from multiple trees to provide a final classification decision.
 
-## Evaluation
+## Evaluation 📈
 The performance of the models is evaluated using metrics such as accuracy, precision, recall, and F1-score. Detailed results are available in the `model_evaluation.py` script.
 
-## Class Imbalance & SMOTE
+## Class Imbalance & SMOTE ⚖️
 Spam SMS classification often faces class imbalance, where one class (e.g., spam) may be underrepresented compared to the other (e.g., ham). To address this:
 
 1. **Class Imbalance**:
@@ -72,14 +72,14 @@ Spam SMS classification often faces class imbalance, where one class (e.g., spam
    - **Class Distribution Before SMOTE**: Visualize the imbalance in the dataset.
    - **Class Distribution After SMOTE**: Show the balanced distribution post-SMOTE application.
 
-## Optimization
+## Optimization 🛠️
 We optimize our models using hyperparameter tuning techniques to enhance performance.
 
-### Grid Search
+### Grid Search 🔍
 - **Grid Search** exhaustively searches through a specified range of hyperparameters to find the best combination.
 - It evaluates all possible combinations within the defined range and selects the optimal set based on performance metrics.
 
-### Random Search
+### Random Search 🎲
 - **Random Search** samples random combinations of hyperparameters from a defined range.
 - It is often faster than Grid Search and can efficiently find good hyperparameters without exhaustive searching.
 
@@ -87,7 +87,7 @@ We optimize our models using hyperparameter tuning techniques to enhance perform
    - **Grid Search Optimization Results**: Display the best parameters found through Grid Search.
    - **Random Search Optimization Results**: Show the best parameters found through Random Search.
 
-## Real World Examples
+## Real World Examples 🌍
 Here we showcase examples of spam and non-spam SMS messages, demonstrating the model's performance in real-world scenarios.
 
 1. **Example 1**: "Congratulations! You've won a $1000 gift card. Call now to claim your prize!"
@@ -99,14 +99,14 @@ Here we showcase examples of spam and non-spam SMS messages, demonstrating the m
 **Visualization**:
    - **Classification Report**: Display the classification report, showing metrics such as precision, recall, and F1-score for the real-world examples.
 
-## Results
+## Results 🏆
 The trained models are saved in the models directory. You can use these models to classify new SMS messages.
 
-## Contributing
+## Contributing 🤝
 We welcome contributions to this project! Please open an issue or create a pull request if you'd like to contribute.
 
-## License
+## License 📄
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## Acknowledgments 🙏
 Kaggle

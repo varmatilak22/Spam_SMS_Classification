@@ -4,6 +4,7 @@ import numpy as np
 import os 
 from helper import abs_model_path,abs_image_path
 import matplotlib.pyplot as plt
+from PIL import Image
 def load_model_and_vectorizer():
     """
     This function will load th vectorizer and model
@@ -122,10 +123,14 @@ elif page == '📉 Class Imbalance & SMOTE':
 
     # Adding images
     st.write('**Class Distribution Before SMOTE:**')
-    st.image(abs_image_path('before.png'), caption='Class Distribution Before SMOTE')
+    img_path=abs_image_path('before.png')
+    img=Image.open(img_path)
+    st.image(img, caption='Class Distribution Before SMOTE')
 
     st.write('**Class Distribution After SMOTE:**')
-    st.image(abs_image_path('after.png'), caption='Class Distribution After SMOTE')
+    img_path=abs_image_path('after.png')
+    img=Image.open(img_path)
+    st.image(img, caption='Class Distribution After SMOTE')
 
 elif page == '📈 Evaluation':
     st.title('📈 Model Evaluation')
@@ -153,7 +158,9 @@ FN & TN
 ''')
 
     st.write('**Visualization of the Confusion Matrix:**')
-    st.image(abs_image_path('confusion_matrx.png'), caption='Confusion Matrix Heatmap')
+    img_path=abs_image_path('confusion_matrx.png')
+    img=Image.open(img_path)
+    st.image(img, caption='Confusion Matrix Heatmap')
 
     # Classification Report Explanation
     st.header('🔍 Classification Report')
@@ -180,7 +187,9 @@ FN & TN
     st.write('- **Support:** The number of actual occurrences of the class in the dataset.')
 
     st.write('**Visualization of the Classification Report:**')
-    st.image(abs_image_path('report.png'), caption='Classification Report Metrics')
+    img_path=abs_image_path('report.png')
+    img=Image.open(img_path)
+    st.image(img, caption='Classification Report Metrics')
 
 elif page == '⚙️ Optimization':
 
@@ -282,4 +291,6 @@ elif page == '🌍 Real World Examples':
     st.write("Here is the classification report showing how the model performs on the real-world examples:")
 
     # Display classification report heatmap image
-    st.image(abs_image_path('reality.png'), caption='Classification Report Heatmap', use_column_width=True)
+    img_path=abs_image_path('reality.png')
+    img=Image.open(img_path)
+    st.image(img, caption='Classification Report Heatmap', use_column_width=True)

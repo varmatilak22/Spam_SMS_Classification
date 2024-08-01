@@ -6,6 +6,9 @@ from helper import abs_model_path,abs_image_path
 import matplotlib.pyplot as plt
 from PIL import Image
 
+st.set_page_config(page_title='Spam SMS Classification') 
+
+
 @st.cache_resource
 def load_model_and_vectorizer():
     """

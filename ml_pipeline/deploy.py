@@ -5,6 +5,8 @@ import os
 from helper import abs_model_path,abs_image_path
 import matplotlib.pyplot as plt
 from PIL import Image
+
+@st.cache_resource
 def load_model_and_vectorizer():
     """
     This function will load th vectorizer and model
@@ -17,6 +19,7 @@ def load_model_and_vectorizer():
 
 model,vector=load_model_and_vectorizer()
 
+@st.cache_data
 def predict(text):
     vectorized_text=vector.transform([text])
     predict=model.predict(vectorized_text)

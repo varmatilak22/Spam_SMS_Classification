@@ -291,7 +291,7 @@ elif page == '🌍 Real World Examples':
     st.write("Here is the classification report showing how the model performs on the real-world examples:")
 
     # Display classification report heatmap image
-    img_path=abs_image_path('reality.png')
+    img_path=abs_image_path('real.PNG')
     st.write(f"Image Path:{img_path}")
-    img=Image.open('assests/reality.png')
+    img=Image.open(img_path)
     st.image(img, caption='Classification Report Heatmap', use_column_width=True)

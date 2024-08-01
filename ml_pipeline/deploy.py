@@ -293,4 +293,5 @@ elif page == '🌍 Real World Examples':
     # Display classification report heatmap image
     img_path=abs_image_path('reality.png')
     img=Image.open(img_path)
+    st.write(f"Image Path:{img_path}")
     st.image(img, caption='Classification Report Heatmap', use_column_width=True)

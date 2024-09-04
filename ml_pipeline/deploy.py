@@ -155,13 +155,7 @@ elif page == '📈 Evaluation':
     st.write('- **False Negatives (FN):** Number of incorrectly predicted negative instances (actual positive).')
 
     st.write('**Confusion Matrix Formula:**')
-    st.latex(r'''
-    \text{Confusion Matrix} =
-\begin{bmatrix}
-TP & FP \\
-FN & TN
-\end{bmatrix}
-''')
+    st.latex(r'''\text{Confusion Matrix} = \begin{bmatrix}TP & FP \\FN & TN\end{bmatrix}''')
 
     st.write('**Visualization of the Confusion Matrix:**')
     img_path=abs_image_path('confusion_matrx.png')
@@ -253,7 +247,6 @@ elif page == '⚙️ Optimization':
     - `clf__max_depth`: 28
     """)
     st.write('**Best score:** 0.97')
-
 
 elif page == '🌍 Real World Examples':
     st.header('🌍 Real World Examples')
